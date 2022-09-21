@@ -1,0 +1,62 @@
+@use "../../styles/global.scss" as *;
+@use "../../styles/partials/typography.scss" as *;
+
+.bar-lounge {
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  font-family: "montserrat";
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    font-size: 1.5rem;
+  }
+
+  &__header {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    line-height: 2rem;
+  }
+
+  &__img {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    padding-left: 40px;
+  }
+
+  &__img-back-layer {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 0;
+    width: 350px;
+    border-radius: 2%;
+    box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  &__img-top-layer {
+    width: 350px;
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+
+  &__img-back-layer,
+  &__img-top-layer {
+    border-radius: 1%;
+  }
+}

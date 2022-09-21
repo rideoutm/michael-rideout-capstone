@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Intro from "./components/Intro/Intro";
+import Footer from "./components/Footer/Footer";
+import { startTransition, useRef } from "react";
+import Favorites from "./components/Favorites/Favorites";
+import BarLounge from "./components/BarLounge/BarLounge";
+import MainDivider from "./components/MainDivider/MainDivider";
 
 function App() {
+  const scrollRef = useRef();
+  const scrollTo = () => {
+    scrollRef.current.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Header />
+        <Hero scrollTo={scrollTo} />
+        <Intro refProp={scrollRef} />
+        <Favorites />
+        <BarLounge />
+        <MainDivider />
+        <Routes>
+          <Route path="/"></Route>
+          <Route path="/reservations" />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

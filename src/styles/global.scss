@@ -1,0 +1,17 @@
+@use "./partials/typography" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand";
+}
+
+a,
+Link {
+  text-decoration: none;
+  color: #fff;
+}

@@ -1,0 +1,405 @@
+/*General Styles*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font: normal 16px "quicksand", sans-serif;
+}
+
+ul,
+nav {
+  list-style: none;
+  font-size: 24px;
+}
+
+nav a {
+  padding: 5px;
+}
+nav a:hover {
+  border-bottom: 1px solid #dddddd;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #dddddd;
+}
+
+.background-image {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section h3.title {
+  text-transform: capitalize;
+  font: bold 32px "Open Sans", sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*Header Styles*/
+
+header {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 35px 100px;
+  color: #fff;
+  z-index: 2;
+  font-size: 20px;
+  background: #000;
+}
+
+header nav {
+  opacity: 0;
+  animation: 1s fadein 1s forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header h2 {
+  font-family: "Quicksand", sans-serif;
+}
+
+header nav {
+  display: flex;
+  margin-right: -15px;
+}
+
+header nav li {
+  margin: 0 15px;
+}
+
+#description {
+  display: flex;
+  font-family: "quicksand";
+  font-size: 25px;
+  line-height: 1.5em;
+  width: 60%;
+  padding: 60px;
+}
+
+#description a {
+  color: #fff;
+}
+
+/*Hero Styles*/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  min-height: 75vh;
+  color: #fff;
+  align-items: center;
+}
+
+.hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  background-color: #000;
+}
+
+.hero h1 {
+  font: bold 60px "Open Sans", sans-serif;
+  margin-bottom: 15px;
+}
+
+.hero h3 {
+  font: normal 28px "Open Sans", sans-serif;
+  margin-bottom: 40px;
+}
+
+.hero a.resBtn {
+  padding: 20px 46px;
+  font-family: quicksand, sans-serif;
+}
+a.resBtn {
+  font-size: 20px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #171717;
+  animation: 1s slide 0.5s forwards;
+  opacity: 0;
+}
+
+.hero a.resBtn:hover {
+  background: #353535;
+  transition: 0.5s ease-in;
+}
+
+.hero-content-area {
+  opacity: 0;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
+}
+
+@keyframes slide {
+  100% {
+    opacity: 1;
+  }
+}
+
+.foods {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: quicksand;
+  background: #171717;
+  color: #fff;
+}
+.foods div {
+  padding: 25px;
+}
+.foods #favs {
+  padding-left: -90px;
+  font-style: italic;
+  font-size: 30px;
+}
+.foods .leftFoods {
+  padding-left: 10px;
+  width: 40%;
+}
+.foods .rightFoods {
+  padding-right: 10px;
+  width: 40%;
+}
+
+.rightFoods div:nth-child(1) {
+  padding-top: 70px;
+}
+
+.foods h2 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+#viewFull {
+  font-style: italic;
+  line-height: 3em;
+  border-bottom: 1px solid white;
+  /* animation-name: viewFull;    <---- Add slower transition to the View Full Link
+	animation-duration: 1s;
+	animation-direction: forwards;
+	*/
+}
+/* @keyframes viewFull
+{
+	100% #viewFull .a{}
+} */
+
+/* Menu */
+.grid {
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.grid li:hover {
+  opacity: 0.9;
+}
+
+.grid li {
+  height: 100%;
+  padding: 0px;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu .grid li.small {
+  flex-basis: 50%;
+}
+
+.menu .grid li.large {
+  flex-basis: 100%;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px 0 50px 0;
+}
+.contact h2 {
+  padding-bottom: 25px;
+}
+.contact p,
+.contact a {
+  color: #000;
+}
+.contact a:hover {
+  color: #dddddd;
+}
+.contact #hours,
+.contact #contact {
+  padding-top: 25px;
+}
+.social {
+  font-size: 30px;
+  padding: 50px 0;
+}
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.map iframe {
+  max-width: 100%;
+}
+
+/* Reservations */
+
+.reservation {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#reservationForm {
+  width: 50%;
+}
+#reservationForm input {
+  padding: 5px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+}
+#reservationForm input:focus {
+  background: #fff;
+}
+.formLabels {
+  font-size: 18px;
+  font-family: "quicksand";
+  padding: 10px;
+}
+
+#reservationTitle {
+  font-size: 50px;
+  text-align: center;
+  width: 50%;
+  font-family: "quicksand";
+}
+
+/* Footer */
+#mainFooter {
+  background: #171717;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* Need to add media query for 906px */
+@media (max-width: 940px) {
+  #description {
+    width: 100%;
+  }
+  .foods .leftFoods {
+    padding-left: 10px;
+    width: 50%;
+  }
+  .foods .rightFoods {
+    padding-right: 10px;
+    width: 50%;
+  }
+
+  .rightFoods div:nth-child(1) {
+    padding-top: 25px;
+  }
+  .grid {
+    flex-wrap: nowrap;
+  }
+  .menu .grid li.large {
+    flex-basis: 50%;
+  }
+  .subContainer {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 630px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+  }
+  #Gastro {
+    display: none;
+  }
+  .reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #description {
+    width: 100%;
+    font-size: 16px;
+  }
+  .foods {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .foods #favs {
+    font-size: 30px;
+  }
+  .foods .leftFoods,
+  .foods .rightFoods {
+    width: 100%;
+  }
+  .foods .leftFoods {
+    padding-bottom: 0;
+  }
+  .foods .rightFoods {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .rightFoods div:nth-child(1) {
+    padding-top: 25px;
+  }
+
+  .foods .leftFoods h2,
+  .foods .rightFoods h2 {
+    font-size: 20px;
+  }
+  .foods #viewFull {
+    letter-spacing: 0.5em;
+  }
+  .contact {
+    flex-direction: column;
+    justify-content: space-betwen;
+    align-items: center;
+  }
+}
