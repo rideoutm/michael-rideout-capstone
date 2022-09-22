@@ -1,17 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useRef } from "react";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Intro from "./components/Intro/Intro";
 import Footer from "./components/Footer/Footer";
-import { startTransition, useRef } from "react";
-import Favorites from "./components/Favorites/Favorites";
-import BarLounge from "./components/BarLounge/BarLounge";
-import MainDivider from "./components/MainDivider/MainDivider";
+import Homepage from "./pages/Homepage/Homepage";
+import Reservations from "./pages/Reservations/Reservations";
 
 function App() {
   const scrollRef = useRef();
+  const resScrollRef = useRef();
   const scrollTo = () => {
     scrollRef.current.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+  };
+
+  const resScrollTo = () => {
+    resScrollRef.current.scrollIntoView({
       block: "start",
       behavior: "smooth",
     });
@@ -21,14 +26,20 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Hero scrollTo={scrollTo} />
-        <Intro refProp={scrollRef} />
-        <Favorites />
-        <BarLounge />
-        <MainDivider />
         <Routes>
-          <Route path="/"></Route>
-          <Route path="/reservations" />
+          <Route
+            path="/"
+            element={<Homepage scrollTo={scrollTo} scrollRef={scrollRef} />}
+          ></Route>
+          <Route
+            path="/reservations"
+            element={
+              <Reservations
+                resScrollRef={resScrollRef}
+                resScrollTo={resScrollTo}
+              />
+            }
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
