@@ -46,16 +46,27 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  animation: 1s ResPageSlide 1s forwards;
-  margin-top: 3rem;
-  scroll-margin: 160px;
 
-  @keyframes ResPageSlide {
-    0% {
-      margin-top: 3rem;
-    }
-    100% {
-      margin-top: 0;
+  margin-top: 4rem;
+  scroll-margin: 225px;
+
+  &--animate {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 4rem;
+    scroll-margin: 225px;
+    animation: 1s ResPageSlide 1s forwards;
+    @keyframes ResPageSlide {
+      0% {
+        margin-top: 4rem;
+      }
+      100% {
+        margin-top: 0;
+      }
     }
   }
 

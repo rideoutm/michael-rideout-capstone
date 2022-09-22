@@ -1,8 +1,26 @@
 import "./Reservations.scss";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import downArrow from "../../assets/angle-down-solid.svg";
 
 function Reservations({ resScrollRef, resScrollTo }) {
+  // const [triggerAnim, setTriggerAnim] = useState();
+  // const intersectRef = useRef();
+  const [resAnim, setResAnim] = useState();
+  console.log("Visible: ", resAnim);
+
+  useEffect(() => {
+    if (!resScrollRef?.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setResAnim(entry.isIntersecting);
+      },
+      { threshold: 1 }
+    );
+    observer.observe(resScrollRef.current);
+    console.log(resScrollRef.current);
+  }, []);
+
   return (
     <>
       <div className="reservation-page__header">
@@ -15,7 +33,11 @@ function Reservations({ resScrollRef, resScrollTo }) {
           />
         </div>
       </div>
-      <section ref={resScrollRef} className="reservationPage">
+
+      <section
+        ref={resScrollRef}
+        className={resAnim ? "reservationPage--animate" : "reservationPage"}
+      >
         <div id="reservationTitle">
           <p>Reservations</p>
           <div id="reservSubText">
