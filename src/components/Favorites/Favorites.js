@@ -1,11 +1,33 @@
 import "./Favorites.scss";
 import delfina from "../../assets/delfina-cocciardi.jpg";
 import mathewReyes from "../../assets/matthew-reyes.jpg";
+import { useState, useRef, useEffect } from "react";
 
 function Favorites() {
+  const [secondImgAnim, setSecondImgAnim] = useState();
+
+  const secondImage = useRef();
+
+  useEffect(() => {
+    const observer2 = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setSecondImgAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer2.unobserve(secondImage.current);
+        }
+      },
+      { threshold: 1 }
+    );
+    observer2.observe(secondImage.current);
+  }, []);
+
   return (
     <div className="favorites">
-      <div className="favorites__img">
+      <div
+        ref={secondImage}
+        className={secondImgAnim ? "favorites__img" : "favorites__img--blurred"}
+      >
         <img className="favorites__img1" src={delfina} alt="food image one" />
 
         <img

@@ -15,6 +15,17 @@
     align-items: center;
     width: 40%;
     padding: 60px 60px 60px 0;
+    transition: 1.5s ease-out;
+
+    &--blurred {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      padding: 60px 60px 60px 0;
+      filter: blur(10px);
+      transition: 1.5s ease-out;
+    }
   }
 
   &__img1 {

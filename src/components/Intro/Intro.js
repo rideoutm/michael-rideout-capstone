@@ -1,8 +1,27 @@
 import "./Intro.scss";
 import louisHanselFood from "../../assets/louis-hansel.jpg";
 import louisHanselFood2 from "../../assets/louis-hansel2.jpg";
+import { useRef, useState, useEffect } from "react";
 
 function Intro({ refProp }) {
+  const [firstImgAnim, setFirstImgAnim] = useState();
+
+  const firstImage = useRef();
+
+  useEffect(() => {
+    const observer1 = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setFirstImgAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer1.unobserve(firstImage.current);
+        }
+      },
+      { threshold: 1 }
+    );
+
+    observer1.observe(firstImage.current);
+  }, [firstImage]);
   return (
     <>
       <div ref={refProp} id="description" className="intro">
@@ -16,7 +35,10 @@ function Intro({ refProp }) {
             palates.
           </p>
         </div>
-        <div className="intro__img">
+        <div
+          ref={firstImage}
+          className={firstImgAnim ? "intro__img" : "intro__img--blurred"}
+        >
           <img
             className="intro__img-back-layer"
             src={louisHanselFood}

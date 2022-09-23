@@ -4,9 +4,8 @@ import downArrow from "../../assets/angle-down-solid.svg";
 
 function Reservations({ resScrollRef, resScrollTo }) {
   // const [triggerAnim, setTriggerAnim] = useState();
-  // const intersectRef = useRef();
+
   const [resAnim, setResAnim] = useState();
-  console.log("Visible: ", resAnim);
 
   useEffect(() => {
     if (!resScrollRef?.current) return;
@@ -18,7 +17,6 @@ function Reservations({ resScrollRef, resScrollTo }) {
       { threshold: 1 }
     );
     observer.observe(resScrollRef.current);
-    console.log(resScrollRef.current);
   }, []);
 
   return (

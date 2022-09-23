@@ -30,6 +30,19 @@
     position: relative;
     width: 40%;
     padding-left: 40px;
+    transition: 1.5s ease-out;
+    filter: blur(0px);
+
+    &--blurred {
+      height: 400px;
+
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 40%;
+      padding-left: 40px;
+      filter: blur(10px);
+    }
   }
 
   &__img-back-layer {

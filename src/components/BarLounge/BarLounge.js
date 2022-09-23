@@ -1,8 +1,26 @@
 import "./BarLounge.scss";
 import drinkOne from "../../assets/drinkOne.jpg";
 import drinkTwo from "../../assets/drink2.jpg";
+import { useState, useRef, useEffect } from "react";
 
 function BarLounge() {
+  const [thirdImgAnim, setThirdImgAnim] = useState();
+
+  const thirdImage = useRef();
+
+  useEffect(() => {
+    const observer3 = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setThirdImgAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer3.unobserve(thirdImage.current);
+        }
+      },
+      { threshold: 1 }
+    );
+    observer3.observe(thirdImage.current);
+  }, []);
   return (
     <div className="bar-lounge">
       <div className="bar-lounge__text">
@@ -16,7 +34,12 @@ function BarLounge() {
           you'll find here.
         </p>
       </div>
-      <div className="bar-lounge__img">
+      <div
+        ref={thirdImage}
+        className={
+          thirdImgAnim ? "bar-lounge__img" : "bar-lounge__img--blurred"
+        }
+      >
         <img
           className="bar-lounge__img-back-layer"
           src={drinkTwo}

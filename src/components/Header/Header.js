@@ -4,7 +4,7 @@ import facebook from "../../assets/square-facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import twitter from "../../assets/twitter.svg";
 // import { useInView } from "react-intersection-observer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Header() {
   const [navBar, setNavBar] = useState(false);
@@ -40,7 +40,7 @@ function Header() {
           </Link>
         </div>
         <div className="navigation__list-item">
-          <Link className="navigation__list-item-link" to="">
+          <Link className="navigation__list-item-link" to="/menu">
             MENU
           </Link>
         </div>
