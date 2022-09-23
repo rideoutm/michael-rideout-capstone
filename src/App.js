@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Homepage from "./pages/Homepage/Homepage";
 import Reservations from "./pages/Reservations/Reservations";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 function App() {
   const scrollRef = useRef();
@@ -40,6 +41,10 @@ function App() {
               />
             }
           />
+          <Route
+            path="/contact"
+            element={<ContactUs scrollTo={scrollTo} scrollRef={scrollRef} />}
+          ></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

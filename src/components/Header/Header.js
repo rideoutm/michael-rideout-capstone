@@ -36,11 +36,16 @@ function Header() {
         </div>
         <div className="navigation__list-item">
           <Link className="navigation__list-item-link" to="">
-            MENU
+            ABOUT
           </Link>
         </div>
         <div className="navigation__list-item">
           <Link className="navigation__list-item-link" to="">
+            MENU
+          </Link>
+        </div>
+        <div className="navigation__list-item">
+          <Link className="navigation__list-item-link" to="/contact">
             CONTACT
           </Link>
         </div>
