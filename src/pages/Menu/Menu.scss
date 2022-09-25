@@ -3,12 +3,14 @@
 
 .menu {
   display: flex;
+  justify-content: center;
   scroll-margin: 160px;
 
   &__cont {
     display: flex;
+    justify-content: center;
     width: 50%;
-    margin: 4rem;
+    margin: 6rem;
   }
 
   &__item {
@@ -23,20 +25,28 @@
   &__art {
     width: 50%;
     position: relative;
+    transition: 1s ease-out;
+
+    &--blurred {
+      width: 50%;
+      position: relative;
+      filter: blur(10px);
+      transition: 1.5s ease-out;
+    }
   }
 
   &__art-pic1 {
     position: absolute;
     top: 10%;
-    left: 10%;
-    height: 600px;
+    left: 5%;
+    height: 550px;
   }
 
   &__art-pic2 {
     position: absolute;
     top: 50%;
-    left: 40%;
-    width: 500px;
+    left: 35%;
+    width: 450px;
     z-index: 2;
   }
 }

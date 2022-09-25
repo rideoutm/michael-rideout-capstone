@@ -1,20 +1,29 @@
 @use "../../styles/global.scss" as *;
 @use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
-.footer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background: #171717;
-  padding: 100px 0;
-  color: #fff;
-  margin-top: 5rem;
+@include tablet {
+  .footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #171717;
+    padding: 100px 0;
+    color: #fff;
+    margin-top: 1rem;
 
-  &__title {
-    font-family: "herr von muellerhoff";
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: 10px;
+    &__title {
+      font-family: "herr von muellerhoff";
+      font-size: 6rem;
+      font-weight: 300;
+      letter-spacing: 10px;
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    margin-top: 7rem;
   }
 }

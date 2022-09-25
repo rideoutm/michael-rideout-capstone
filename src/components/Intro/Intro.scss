@@ -1,72 +1,95 @@
 @use "../../styles/global.scss" as *;
 @use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/mixins" as *;
 
-.intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "montserrat";
-  font-size: 25px;
-  line-height: 2rem;
-  width: 100%;
-  padding: 0 100px;
-  margin: 60px 0;
-  scroll-margin: 220px;
-
-  &__text {
-    width: 60%;
-  }
-
-  &__welcome {
-    font-size: 3rem;
-    padding-bottom: 1rem;
-  }
-
-  &__img {
-    height: 400px;
+@include tablet {
+  .intro {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-    width: 40%;
-    padding-left: 40px;
-    transition: 1.5s ease-out;
-    filter: blur(0px);
+    font-family: "montserrat";
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+    margin: 60px 0;
+    scroll-margin: 220px;
 
-    &--blurred {
+    &__text {
+      width: 60%;
+    }
+
+    &__welcome {
+      font-size: 3rem;
+      padding-bottom: 1rem;
+    }
+
+    &__img {
       height: 400px;
-
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       position: relative;
       width: 40%;
-      padding-left: 40px;
-      filter: blur(10px);
+      padding-left: 2.5rem;
+      transition: 1.5s ease-out;
+      // filter: blur(0px);
+
+      &--blurred {
+        height: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 40%;
+        padding-left: 2.5rem;
+        filter: blur(10px);
+      }
+    }
+
+    &__img-back-layer {
+      width: 300px;
+      border-radius: 2%;
+      margin-bottom: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    &__img-top-layer {
+      width: 300px;
+
+      box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    &__img-back-layer,
+    &__img-top-layer {
+      border-radius: 1%;
     }
   }
+}
 
-  &__img-back-layer {
-    position: absolute;
-    top: 0%;
-    left: 5%;
-    z-index: 0;
-    width: 350px;
-    border-radius: 2%;
-    box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
-      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  }
-  &__img-top-layer {
-    width: 350px;
-    z-index: 1;
-    position: absolute;
-    top: 40%;
-    left: 36%;
-    box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
-      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  }
+@include desktop {
+  .intro {
+    font-size: 1.56rem;
+    padding: 0 6.25rem;
+    margin: 60px 0;
+    scroll-margin: 220px;
 
-  &__img-back-layer,
-  &__img-top-layer {
-    border-radius: 1%;
+    &__img-back-layer {
+      position: absolute;
+      top: 0%;
+      left: 5%;
+      z-index: 0;
+      width: 350px;
+      border-radius: 2%;
+    }
+    &__img-top-layer {
+      width: 350px;
+      z-index: 1;
+      position: absolute;
+      top: 40%;
+      left: 36%;
+    }
   }
 }

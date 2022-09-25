@@ -2,8 +2,26 @@ import "./Menu.scss";
 import downArrow from "../../assets/angle-down-solid.svg";
 import menuPic1 from "../../assets/menupic1.jpg";
 import menuPic2 from "../../assets/menupic2.jpg";
+import { useState, useEffect } from "react";
 
 function Menu({ scrollTo, scrollRef }) {
+  const [menuAnim, setMenuAnim] = useState();
+
+  useEffect(() => {
+    if (!scrollRef?.current) return;
+    const observer4 = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setMenuAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer4.unobserve(scrollRef.current);
+        }
+      },
+      { threshold: 0.5 }
+    );
+    observer4.observe(scrollRef.current);
+  }, []);
+
   return (
     <>
       <div className="reservation-page__header">
@@ -16,7 +34,7 @@ function Menu({ scrollTo, scrollRef }) {
           />
         </div>
       </div>
-      <div ref={scrollRef} className="menu">
+      <div ref={scrollRef} className={"menu"}>
         <div className="menu__cont">
           <div className="menu__left">
             <div className="menu__item">
@@ -76,7 +94,7 @@ function Menu({ scrollTo, scrollRef }) {
             </div>
           </div>
         </div>
-        <div className="menu__art">
+        <div className={menuAnim ? "menu__art" : "menu__art--blurred"}>
           <img className="menu__art-pic1" src={menuPic1} alt="menu picture" />
           <img
             className="menu__art-pic2"

@@ -10,7 +10,6 @@ function Header() {
   const [navBar, setNavBar] = useState(false);
 
   const changeBackground = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 200) {
       setNavBar(true);
     } else {
@@ -34,11 +33,11 @@ function Header() {
             WELCOME
           </Link>
         </div>
-        <div className="navigation__list-item">
+        {/* <div className="navigation__list-item">
           <Link className="navigation__list-item-link" to="">
             ABOUT
           </Link>
-        </div>
+        </div> */}
         <div className="navigation__list-item">
           <Link className="navigation__list-item-link" to="/menu">
             MENU

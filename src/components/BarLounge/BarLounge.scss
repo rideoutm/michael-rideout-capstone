@@ -1,75 +1,116 @@
 @use "../../styles/global.scss" as *;
 @use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
-.bar-lounge {
-  padding: 0 100px;
-  display: flex;
-  justify-content: center;
-  font-family: "montserrat";
-
-  &__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 60%;
-    font-size: 1.5rem;
-  }
-
-  &__header {
-    font-size: 3rem;
-    padding-bottom: 1rem;
-  }
-
-  &__description {
-    line-height: 2rem;
-  }
-
-  &__img {
-    height: 400px;
+@include tablet {
+  .bar-lounge {
+    padding: 0 2rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 40%;
-    padding-left: 40px;
-    transition: 1.5s ease-out;
+    font-family: "montserrat";
 
-    &--blurred {
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 60%;
+      font-size: 1rem;
+    }
+
+    &__header {
+      font-size: 3rem;
+      padding-bottom: 1rem;
+    }
+
+    &__description {
+      line-height: 2rem;
+    }
+
+    &__img {
       height: 400px;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: relative;
+      flex-direction: column;
       width: 40%;
-      padding-left: 40px;
-      filter: blur(10px);
+      padding-left: 2.5rem;
       transition: 1.5s ease-out;
+
+      &--blurred {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 40%;
+        padding-left: 2.5rem;
+        filter: blur(10px);
+        transition: 1.5s ease-out;
+      }
+    }
+
+    &__img-back-layer {
+      width: 300px;
+      border-radius: 2%;
+      margin-bottom: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    &__img-top-layer {
+      width: 300px;
+
+      box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    &__img-back-layer,
+    &__img-top-layer {
+      border-radius: 1%;
     }
   }
+}
 
-  &__img-back-layer {
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    z-index: 0;
-    width: 350px;
-    border-radius: 2%;
-    box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
-      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  }
-  &__img-top-layer {
-    width: 350px;
-    z-index: 1;
-    position: absolute;
-    top: 5%;
-    left: 45%;
-    box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
-      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  }
+@include desktop {
+  .bar-lounge {
+    padding: 0 6.25rem;
 
-  &__img-back-layer,
-  &__img-top-layer {
-    border-radius: 1%;
+    &__text {
+      font-size: 1.5rem;
+    }
+
+    &__img {
+      position: relative;
+
+      &--blurred {
+        position: relative;
+      }
+    }
+
+    &__img-back-layer {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      z-index: 0;
+      width: 350px;
+      border-radius: 2%;
+      box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    &__img-top-layer {
+      width: 350px;
+      z-index: 1;
+      position: absolute;
+      top: 5%;
+      left: 45%;
+      box-shadow: rgba(0, 0, 0, 0.66) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    &__img-back-layer,
+    &__img-top-layer {
+      border-radius: 1%;
+    }
   }
 }
