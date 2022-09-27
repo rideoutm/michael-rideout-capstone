@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/michael-rideout-capstone/static/css/main.016caa27.css",
+    "main.js": "/michael-rideout-capstone/static/js/main.7aad2a31.js",
+    "static/media/pexels-daria-6536617.jpg": "/michael-rideout-capstone/static/media/pexels-daria-6536617.d8840dfb2ce0f14373db.jpg",
+    "static/media/foodDisplay.jpg": "/michael-rideout-capstone/static/media/foodDisplay.dc14c2ff1a0f72e0b5bf.jpg",
+    "static/media/louis-hansel.jpg": "/michael-rideout-capstone/static/media/louis-hansel.5c6fce5f98fb12bed42f.jpg",
+    "static/media/delfina-cocciardi.jpg": "/michael-rideout-capstone/static/media/delfina-cocciardi.392728bb36788eb697ea.jpg",
+    "static/media/reviewCar1.jpg": "/michael-rideout-capstone/static/media/reviewCar1.c4ae2486859010ac0d3b.jpg",
+    "static/media/reviewCar3.jpg": "/michael-rideout-capstone/static/media/reviewCar3.a63cd1b798d02df1a14b.jpg",
+    "static/media/menupic1.jpg": "/michael-rideout-capstone/static/media/menupic1.8775ae7a5e7fa1076abb.jpg",
+    "static/media/maindiv.jpg": "/michael-rideout-capstone/static/media/maindiv.588f0809083d995a144a.jpg",
+    "static/media/main.jpg": "/michael-rideout-capstone/static/media/main.bb1617a6e10a07639d85.jpg",
+    "static/media/matthew-reyes.jpg": "/michael-rideout-capstone/static/media/matthew-reyes.ce097739bb8cc9658854.jpg",
+    "static/media/reviewCarNew3.jpg": "/michael-rideout-capstone/static/media/reviewCarNew3.c5ad280fbce3b9373be4.jpg",
+    "static/media/louis-hansel2.jpg": "/michael-rideout-capstone/static/media/louis-hansel2.de12aef185d46f24c116.jpg",
+    "static/media/drinkOne.jpg": "/michael-rideout-capstone/static/media/drinkOne.0d7764f2d1db4a24b7cc.jpg",
+    "static/media/drink2.jpg": "/michael-rideout-capstone/static/media/drink2.fea7c4a58c63590582b6.jpg",
+    "static/media/menupic2.jpg": "/michael-rideout-capstone/static/media/menupic2.4bbb0a03d95d6a0483be.jpg",
+    "static/media/slick.svg": "/michael-rideout-capstone/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/michael-rideout-capstone/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/michael-rideout-capstone/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/michael-rideout-capstone/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/instagram.svg": "/michael-rideout-capstone/static/media/instagram.23fed371347861adf6d32ce8ee8ad7c4.svg",
+    "index.html": "/michael-rideout-capstone/index.html",
+    "static/media/twitter.svg": "/michael-rideout-capstone/static/media/twitter.966f8768286e0045897e6e0e15c1285c.svg",
+    "static/media/quote-right-solid.svg": "/michael-rideout-capstone/static/media/quote-right-solid.fd6e2f1821c99fcad5d0004ad6553b40.svg",
+    "static/media/square-facebook.svg": "/michael-rideout-capstone/static/media/square-facebook.34a92b1a24cafb2db79a21b61d75c85e.svg",
+    "static/media/angle-down-solid.svg": "/michael-rideout-capstone/static/media/angle-down-solid.68e193f30f2b8a55254480db1f460271.svg",
+    "main.016caa27.css.map": "/michael-rideout-capstone/static/css/main.016caa27.css.map",
+    "main.7aad2a31.js.map": "/michael-rideout-capstone/static/js/main.7aad2a31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.016caa27.css",
+    "static/js/main.7aad2a31.js"
+  ]
+}
