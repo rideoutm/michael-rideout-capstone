@@ -34,11 +34,15 @@ function Menu({ scrollTo, scrollRef }) {
           />
         </div>
       </div>
-      <div ref={scrollRef} className={"menu"}>
+      <div ref={scrollRef} className="menu">
         <div className="menu__cont">
+          <div className="menu__mobile-art">
+            <img className="menu__mobile-art-pic1" src={menuPic1} alt="" />
+            <img className="menu__mobile-art-pic2" src={menuPic2} alt="" />
+          </div>
           <div className="menu__left">
             <div className="menu__item">
-              <h4>Grilled Chicken Caesar $10</h4>
+              <h4 className="menu__item-title">Grilled Chicken Caesar $10</h4>
               Romaine, parmesan, and garlic croutons.
             </div>
             <div className="menu__item">
@@ -47,39 +51,41 @@ function Menu({ scrollTo, scrollRef }) {
               on: Sautéed Mushrooms $5
             </div>
             <div className="menu__item">
-              <h4>BBQ Back Ribs $30</h4>
+              <h4 className="menu__item-title">BBQ Back Ribs $30</h4>
               Bourbon bbq sauce, sweet potato cajun fries, zesty dill avocado
               slaw.
             </div>
             <div className="menu__item">
-              <h4>Cajun Chicken $20</h4>
+              <h4 className="menu__item-title">Cajun Chicken $20</h4>
               Grilled chicken marinated with our in-house cajun sauce. Served
               with homemade baked potato chips and seasonal vegetables.
             </div>
             <div className="menu__item">
-              <h4>Seafood Sirloin $32</h4>
+              <h4 className="menu__item-title">Seafood Sirloin $32</h4>
               8oz top sirloin, seasonal vegetables, deliciously roasted
               potatoes.
             </div>
             <div className="menu__item">
-              <h4>Portobello Mushroom Chicken $26</h4>
+              <h4 className="menu__item-title">
+                Portobello Mushroom Chicken $26
+              </h4>
               Vermicelli pasta, garlic creamy sauce, basil pesto, and seasonal
               vegetables.
             </div>
           </div>
           <div className="menu__right">
             <div className="menu__item">
-              <h4>Wild Boar Shoulder $30</h4>
+              <h4 className="menu__item-title">Wild Boar Shoulder $30</h4>
               Pan-seared wild boar, cracked peppercorns, and red wine glaze.
               Served with hot corn cakes and a side salad.
             </div>
             <div className="menu__item">
-              <h4>Bison Burger $20</h4>
+              <h4 className="menu__item-title">Bison Burger $20</h4>
               Kaiser bun, lettuce, tomato, red onions, and pepper jack cheese.
               Served with a side garden salad or fried potato wedges.
             </div>
             <div className="menu__item">
-              <h4>Lamb Stew $21</h4>
+              <h4 className="menu__item-title">Lamb Stew $21</h4>
               Roma tomatoes, cannellini beans, fresh onion. $22
             </div>
             <div className="menu__item">
@@ -87,7 +93,7 @@ function Menu({ scrollTo, scrollRef }) {
               Tartare with herb oil, served with fava beans, parsley, chives.
             </div>
             <div className="menu__item">
-              <h4>Brisket Sandwich $20</h4>
+              <h4 className="menu__item-title">Brisket Sandwich $20</h4>
               Slow-smoked beef brisket sliced julienne, pickled okra, red
               onions, tomatoes, and ciabatta bread. Served with a side salad or
               fried potatoes.

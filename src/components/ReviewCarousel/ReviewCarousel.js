@@ -4,8 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "./ReviewCarousel.scss";
 import data from "../../assets/Data/Reviews.json";
 import Slider from "react-slick";
-import carouselQuote from "../../assets/quote-right-solid.svg";
 
+// Image imports
+import carouselQuote from "../../assets/quote-right-solid.svg";
 import reviewCar1 from "../../assets/reviewCar1.jpg";
 import reviewCar2 from "../../assets/reviewCarNew3.jpg";
 import reviewCar3 from "../../assets/reviewCar3.jpg";

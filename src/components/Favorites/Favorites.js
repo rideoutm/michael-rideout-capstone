@@ -7,6 +7,21 @@ function Favorites() {
   const [secondImgAnim, setSecondImgAnim] = useState();
 
   const secondImage = useRef();
+  const secondImageMain = useRef();
+
+  useEffect(() => {
+    const observerMain = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setSecondImgAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observerMain.unobserve(secondImageMain.current);
+        }
+      },
+      { threshold: 0.9 }
+    );
+    observerMain.observe(secondImageMain.current);
+  }, []);
 
   useEffect(() => {
     const observer2 = new IntersectionObserver(
@@ -17,7 +32,7 @@ function Favorites() {
           observer2.unobserve(secondImage.current);
         }
       },
-      { threshold: 1 }
+      { threshold: 0.9 }
     );
     observer2.observe(secondImage.current);
   }, []);
@@ -25,11 +40,10 @@ function Favorites() {
   return (
     <div className="favorites">
       <div
-        ref={secondImage}
+        ref={secondImageMain}
         className={secondImgAnim ? "favorites__img" : "favorites__img--blurred"}
       >
         <img className="favorites__img1" src={delfina} alt="food image one" />
-
         <img
           className="favorites__img2"
           src={mathewReyes}
@@ -73,6 +87,26 @@ function Favorites() {
           </div>
         </div>
         <button className="favorites__menu-btn">OUR MENU</button>
+      </div>
+      <div
+        ref={secondImage}
+        className={
+          secondImgAnim
+            ? "favorites__img-mobi"
+            : "favorites__img-mobi--blurred-mobi"
+        }
+      >
+        <img
+          className="favorites__img1-mobi"
+          src={delfina}
+          alt="food image one"
+        />
+
+        <img
+          className="favorites__img2-mobi"
+          src={mathewReyes}
+          alt="food image two"
+        />
       </div>
     </div>
   );

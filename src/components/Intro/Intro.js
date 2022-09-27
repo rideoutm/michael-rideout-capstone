@@ -17,7 +17,7 @@ function Intro({ refProp }) {
           observer1.unobserve(firstImage.current);
         }
       },
-      { threshold: 1 }
+      { threshold: 0.5 }
     );
 
     observer1.observe(firstImage.current);

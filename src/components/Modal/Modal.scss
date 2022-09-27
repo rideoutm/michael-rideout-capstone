@@ -1,0 +1,72 @@
+@use "../../styles/global.scss" as *;
+@use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.modal {
+  animation: 0.25s menuFade ease-out;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  transition: 0.25s ease-out;
+  @keyframes menuFade {
+    0% {
+      width: 100vw;
+      height: 100vh;
+    }
+    95% {
+      width: 0vw;
+      height: 0vh;
+    }
+    100% {
+      display: none;
+    }
+  }
+
+  //   transition: 0.25s ease-out;
+
+  &--visible {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    font-family: "montserrat";
+    z-index: 22;
+    width: 100vw;
+    height: 100vh;
+
+    animation: 0.25s menuGrow ease-in;
+
+    @keyframes menuGrow {
+      0% {
+        width: 0vw;
+        height: 0vh;
+      }
+      100% {
+        width: 100vw;
+        height: 100vh;
+      }
+    }
+
+    &__link {
+      color: #fff;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      z-index: 23;
+      opacity: 0;
+      animation: 0.5s fadeInMenu 0.5s ease-in;
+
+      @keyframes fadeInMenu {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

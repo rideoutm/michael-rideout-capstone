@@ -1,5 +1,6 @@
 @use "../../styles/global.scss" as *;
 @use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
 
 .main-divider {
   box-sizing: border-box;
@@ -29,7 +30,8 @@
 
   &__heading {
     font-family: "Herr Von Muellerhoff";
-    font-size: 5rem;
+    font-size: 4rem;
+    text-align: center;
     z-index: 10;
     margin-bottom: 2rem;
     letter-spacing: 3px;
@@ -53,6 +55,14 @@
       background: #fff;
       color: #000;
       transition: 0.5s ease-in;
+    }
+  }
+}
+
+@include tablet {
+  .main-divider {
+    &__heading {
+      font-size: 5rem;
     }
   }
 }

@@ -5,9 +5,11 @@ import instagram from "../../assets/instagram.svg";
 import twitter from "../../assets/twitter.svg";
 // import { useInView } from "react-intersection-observer";
 import { useState, useEffect, useRef } from "react";
+import Modal from "../Modal/Modal";
 
 function Header() {
   const [navBar, setNavBar] = useState(false);
+  const [show, setShow] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 200) {
@@ -15,6 +17,12 @@ function Header() {
     } else {
       setNavBar(false);
     }
+  };
+
+  const handleModal = () => {
+    setShow(!show);
+    console.log(show);
+    return show;
   };
 
   useEffect(() => {
@@ -27,6 +35,13 @@ function Header() {
       <div className="navigation__logo">
         <Link to="/">Annabelle</Link>
       </div>
+
+      <div onClick={() => handleModal()} className="navigation__mob-menu">
+        <div className="navigation__mob-menu-line1"></div>
+        <div className="navigation__mob-menu-line2"></div>
+        <div className="navigation__mob-menu-line3"></div>
+      </div>
+      <Modal setShow={setShow} show={show} />
       <div className="navigation__list">
         <div className="navigation__list-item">
           <Link className="navigation__list-item-link" to="">
@@ -84,7 +99,6 @@ function Header() {
           </a>
         </div>
       </div>
-
       {/* <section class="hero">
         <div
           class="background-image"

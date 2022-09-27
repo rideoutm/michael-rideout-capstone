@@ -2,9 +2,147 @@
 @use "../../styles/partials/typography.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
+.review-carousel {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "montserrat";
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+  flex-direction: column-reverse;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 400px;
+  }
+
+  &__tag {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  &__header {
+    font-size: 3rem;
+  }
+
+  &__imgslider {
+    background: #fff;
+    margin-bottom: 1rem;
+    // line-height: 30px;
+    width: 290px;
+  }
+
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 250px;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.01) 0px 0px 0px 1px;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &__comment-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  &__quote-img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 1.5rem;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 300px;
+    width: 100%;
+    position: relative;
+
+    &-img1 {
+      height: 250px;
+      opacity: 0;
+      left: 28%;
+      top: 7%;
+      position: absolute;
+      transform: translateY(-200px);
+
+      &--anim {
+        height: 250px;
+        opacity: 1;
+        position: absolute;
+        left: 28%;
+        top: 7%;
+        transition: 1s ease-in;
+      }
+    }
+
+    &-img2 {
+      height: 175px;
+      opacity: 0;
+      left: 59%;
+      top: 20%;
+      position: absolute;
+      z-index: -1;
+      transform: translateX(-200px);
+
+      &--anim {
+        height: 175px;
+        opacity: 1;
+        position: absolute;
+        left: 59%;
+        top: 20%;
+        z-index: -1;
+        transition: 1s ease-in;
+      }
+    }
+    &-img3 {
+      height: 175px;
+      top: 20%;
+      left: 5%;
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+
+      transform: translateX(200px);
+
+      &--anim {
+        height: 175px;
+        opacity: 1;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        z-index: -1;
+        transition: 1s ease-in;
+      }
+    }
+  }
+}
+
 @include tablet {
   .review-carousel {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     margin: 0 auto;
     font-family: "montserrat";

@@ -13,8 +13,11 @@ function Reservations({ resScrollRef, resScrollTo }) {
       (entries) => {
         const entry = entries[0];
         setResAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observer.unobserve(resScrollRef.current);
+        }
       },
-      { threshold: 1 }
+      { threshold: 0.5 }
     );
     observer.observe(resScrollRef.current);
   }, []);

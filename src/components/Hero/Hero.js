@@ -2,7 +2,6 @@ import "./Hero.scss";
 import { Link } from "react-router-dom";
 
 import downArrow from "../../assets/angle-down-solid.svg";
-import Intro from "../Intro/Intro";
 
 function Hero({ scrollTo }) {
   return (

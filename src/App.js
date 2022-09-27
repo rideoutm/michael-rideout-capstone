@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Homepage from "./pages/Homepage/Homepage";
@@ -7,10 +7,12 @@ import Reservations from "./pages/Reservations/Reservations";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import Menu from "./pages/Menu/Menu";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   const scrollRef = useRef();
   const resScrollRef = useRef();
+
   const scrollTo = () => {
     scrollRef.current.scrollIntoView({
       block: "start",
@@ -53,6 +55,7 @@ function App() {
               element={<Menu scrollTo={scrollTo} scrollRef={scrollRef} />}
             />
           </Routes>
+          <Modal />
           <Footer />
         </ScrollToTop>
       </BrowserRouter>
