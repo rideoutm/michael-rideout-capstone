@@ -20,7 +20,7 @@
   }
 
   &__socials-link {
-    padding: 1rem;
+    padding: 0.25rem;
   }
 
   &__title {
@@ -41,6 +41,17 @@
     padding: 100px 0;
     color: #fff;
     margin-top: 1rem;
+
+    &__details {
+      font-size: 1rem;
+    }
+    &__socials {
+      padding-bottom: 0.25rem;
+    }
+
+    &__socials-link {
+      padding: 1rem;
+    }
 
     &__title {
       font-family: "herr von muellerhoff";
