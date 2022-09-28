@@ -62,7 +62,7 @@
 
     &__img-back-layer,
     &__img-top-layer {
-      width: 350px;
+      width: 325px;
     }
     &__text {
       width: 60%;
@@ -70,13 +70,11 @@
     }
 
     &__img {
-      position: relative;
       width: 40%;
       padding-left: 2.5rem;
       transition: 1.5s ease-out;
 
       &--blurred {
-        position: relative;
         width: 40%;
         padding-left: 2.5rem;
         filter: blur(10px);
@@ -93,7 +91,14 @@
     scroll-margin: 220px;
 
     &__img {
+      position: relative;
       height: 400px;
+      &--blurred {
+        position: relative;
+        width: 40%;
+        padding-left: 2.5rem;
+        filter: blur(10px);
+      }
     }
 
     &__img-back-layer {

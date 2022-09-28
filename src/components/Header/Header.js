@@ -33,7 +33,7 @@ function Header() {
   return (
     <header className={navBar ? "navigation--scrollActive" : "navigation"}>
       <div className="navigation__logo">
-        <Link to="/">Annabelle</Link>
+        <Link to="/michael-rideout-capstone">Annabelle</Link>
       </div>
 
       <div onClick={() => handleModal()} className="navigation__mob-menu">
@@ -44,7 +44,10 @@ function Header() {
       <Modal setShow={setShow} show={show} />
       <div className="navigation__list">
         <div className="navigation__list-item">
-          <Link className="navigation__list-item-link" to="">
+          <Link
+            className="navigation__list-item-link"
+            to="/michael-rideout-capstone"
+          >
             WELCOME
           </Link>
         </div>

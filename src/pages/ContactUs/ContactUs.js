@@ -48,8 +48,10 @@ function ContactUs({ scrollRef, scrollTo }) {
             scrollWheelZoom={false}
           >
             <TileLayer
-              attribution='&copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-              url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+              attribution='&copy; <a href="https://www.stadiamaps.com/">&copy; Stadia Maps</a>
+              <a href="https://openmaptiles.org/">&copy; OpenMapTiles</a>
+              <a href="https://www.openstreetmap.org/about/">&copy; OpenStreetMap contributors</a>'
+              url="	https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png"
             />
             <Marker
               position={[43.6484942, -79.3719176]}

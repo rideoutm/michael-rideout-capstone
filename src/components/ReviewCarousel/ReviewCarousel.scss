@@ -80,18 +80,20 @@
     position: relative;
 
     &-img1 {
+      // background: url("../../assets/reviewCar1.jpg");
       height: 250px;
       opacity: 0;
-      left: 28%;
+      margin: 0 auto;
       top: 7%;
       position: absolute;
       transform: translateY(-200px);
 
       &--anim {
+        // background: url("../../assets/reviewCar1.jpg");
         height: 250px;
         opacity: 1;
         position: absolute;
-        left: 28%;
+        margin: 0 auto;
         top: 7%;
         transition: 1s ease-in;
       }
@@ -100,7 +102,7 @@
     &-img2 {
       height: 175px;
       opacity: 0;
-      left: 59%;
+      right: 5%;
       top: 20%;
       position: absolute;
       z-index: -1;
@@ -110,7 +112,7 @@
         height: 175px;
         opacity: 1;
         position: absolute;
-        left: 59%;
+        right: 5%;
         top: 20%;
         z-index: -1;
         transition: 1s ease-in;
@@ -154,7 +156,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       width: 50%;
       height: 450px;
     }
@@ -211,13 +213,13 @@
     &__right {
       display: flex;
       justify-content: center;
-      margin: 0 auto;
+      margin: auto;
       margin-left: -1rem;
       width: 50%;
       position: relative;
 
       &-img1 {
-        height: 350px;
+        height: 300px;
         opacity: 0;
         left: 30%;
         top: 7%;
@@ -225,7 +227,7 @@
         transform: translateY(-200px);
 
         &--anim {
-          height: 350px;
+          height: 300px;
           opacity: 1;
           position: absolute;
           left: 30%;
@@ -235,7 +237,7 @@
       }
 
       &-img2 {
-        height: 275px;
+        height: 225px;
         opacity: 0;
         left: 59%;
         top: 15%;
@@ -244,7 +246,7 @@
         transform: translateX(-200px);
 
         &--anim {
-          height: 275px;
+          height: 225px;
           opacity: 1;
           position: absolute;
           left: 59%;
@@ -254,7 +256,7 @@
         }
       }
       &-img3 {
-        height: 275px;
+        height: 225px;
         top: 15%;
         left: 5%;
         position: absolute;
@@ -264,7 +266,7 @@
         transform: translateX(200px);
 
         &--anim {
-          height: 275px;
+          height: 225px;
           opacity: 1;
           position: absolute;
           top: 15%;
@@ -309,40 +311,53 @@
 
     &__right {
       margin-left: 1rem;
+      position: relative;
 
       &-img1 {
-        height: 500px;
-        top: 0;
-        left: 30%;
+        height: 375px;
+        top: -3%;
+        margin-left: 1rem;
+
         &--anim {
-          height: 350px;
+          height: 375px;
+          top: -3%;
           opacity: 1;
           position: absolute;
-          left: 30%;
-          top: 7%;
+          margin-left: 0.25rem;
           transition: 1s ease-in;
         }
       }
       &-img2 {
-        height: 400px;
-        top: 12%;
-
+        height: 275px;
+        top: 15%;
+        right: 5%;
         z-index: -1;
 
         &--anim {
           height: 275px;
           opacity: 1;
           position: absolute;
-          left: 56.5%;
           top: 15%;
+          right: 5%;
           z-index: -1;
           transition: 1s ease-in;
         }
       }
       &-img3 {
-        height: 400px;
-        top: 12%;
+        height: 275px;
+        top: 15%;
+        left: 5%;
         z-index: -1;
+
+        &--anim {
+          height: 275px;
+          opacity: 1;
+          position: absolute;
+          top: 15%;
+          left: 5%;
+          z-index: -1;
+          transition: 1s ease-in;
+        }
       }
     }
   }

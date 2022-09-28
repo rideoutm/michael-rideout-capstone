@@ -2,6 +2,7 @@ import "./Favorites.scss";
 import delfina from "../../assets/delfina-cocciardi.jpg";
 import mathewReyes from "../../assets/matthew-reyes.jpg";
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Favorites() {
   const [secondImgAnim, setSecondImgAnim] = useState();
@@ -86,7 +87,10 @@ function Favorites() {
             </div>
           </div>
         </div>
-        <button className="favorites__menu-btn">OUR MENU</button>
+        <Link className="favorites__menu-link" to="/menu">
+          {" "}
+          <button className="favorites__menu-btn">OUR MENU</button>
+        </Link>
       </div>
       <div
         ref={secondImage}
