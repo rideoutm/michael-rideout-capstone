@@ -87,7 +87,10 @@ function Favorites() {
             </div>
           </div>
         </div>
-        <Link className="favorites__menu-link" to="/menu">
+        <Link
+          className="favorites__menu-link"
+          to="/michael-rideout-capstone/menu"
+        >
           {" "}
           <button className="favorites__menu-btn">OUR MENU</button>
         </Link>

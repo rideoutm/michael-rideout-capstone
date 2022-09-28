@@ -57,12 +57,18 @@ function Header() {
           </Link>
         </div> */}
         <div className="navigation__list-item">
-          <Link className="navigation__list-item-link" to="/menu">
+          <Link
+            className="navigation__list-item-link"
+            to="/michael-rideout-capstone/menu"
+          >
             MENU
           </Link>
         </div>
         <div className="navigation__list-item">
-          <Link className="navigation__list-item-link" to="/contact">
+          <Link
+            className="navigation__list-item-link"
+            to="/michael-rideout-capstone/contact"
+          >
             CONTACT
           </Link>
         </div>

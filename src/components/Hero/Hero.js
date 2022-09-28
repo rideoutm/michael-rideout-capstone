@@ -12,7 +12,10 @@ function Hero({ scrollTo }) {
         <h1 className="hero__restaurant-title">RESTAURANT</h1>
         <div className="hero__sub-title">WHERE FOOD IS PASSION</div>
       </div>
-      <Link to="/reservations" className="hero__res-btn">
+      <Link
+        to="/michael-rideout-capstone/reservations"
+        className="hero__res-btn"
+      >
         Reservations
       </Link>
 

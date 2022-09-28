@@ -38,7 +38,7 @@ function App() {
               element={<Homepage scrollTo={scrollTo} scrollRef={scrollRef} />}
             ></Route>
             <Route
-              path="/reservations"
+              path="/michael-rideout-capstone/reservations"
               element={
                 <Reservations
                   resScrollRef={resScrollRef}
@@ -47,11 +47,11 @@ function App() {
               }
             />
             <Route
-              path="/contact"
+              path="/michael-rideout-capstone/contact"
               element={<ContactUs scrollTo={scrollTo} scrollRef={scrollRef} />}
             ></Route>
             <Route
-              path="/menu"
+              path="/michael-rideout-capstone/menu"
               element={<Menu scrollTo={scrollTo} scrollRef={scrollRef} />}
             />
           </Routes>
