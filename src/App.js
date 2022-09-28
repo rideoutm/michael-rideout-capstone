@@ -34,7 +34,7 @@ function App() {
           <Header />
           <Routes>
             <Route
-              path="/"
+              path="/michael-rideout-capstone"
               element={<Homepage scrollTo={scrollTo} scrollRef={scrollRef} />}
             ></Route>
             <Route
