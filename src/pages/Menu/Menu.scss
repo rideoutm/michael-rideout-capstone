@@ -29,6 +29,19 @@
     align-items: center;
     position: relative;
     margin-bottom: 7vw;
+    transition: 1.5s ease-out;
+    &--blurred {
+      height: 255px;
+      max-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-bottom: 7vw;
+      position: relative;
+      filter: blur(10px);
+      transition: 1.5s ease-out;
+    }
 
     &-pic1 {
       object-fit: cover;
@@ -116,12 +129,13 @@
     }
 
     &__art {
-      display: block;
+      display: flex;
       width: 30%;
       position: relative;
       transition: 1s ease-out;
 
       &--blurred {
+        display: flex;
         width: 28%;
         position: relative;
         filter: blur(10px);

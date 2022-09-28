@@ -1,5 +1,4 @@
 import "./Modal.scss";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Modal(show, setShow) {
@@ -7,19 +6,13 @@ function Modal(show, setShow) {
     <>
       {console.log("show:", show)}
       <div className={show.show ? "modal--visible" : "modal"}>
-        <Link onClick={() => setShow(false)} to="/michael-rideout-capstone">
+        <Link to="/michael-rideout-capstone">
           <div className="modal__link">WELCOME</div>
         </Link>
-        <Link
-          onClick={() => setShow(false)}
-          to="/michael-rideout-capstone/menu"
-        >
+        <Link to="/michael-rideout-capstone/menu">
           <div className="modal__link">MENU</div>
         </Link>
-        <Link
-          onClick={() => setShow(false)}
-          to="/michael-rideout-capstone/contact"
-        >
+        <Link to="/michael-rideout-capstone/contact">
           <div className="modal__link">CONTACT</div>
         </Link>
         <div className="modal__link"></div>

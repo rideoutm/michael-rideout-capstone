@@ -2,10 +2,12 @@ import "./Menu.scss";
 import downArrow from "../../assets/angle-down-solid.svg";
 import menuPic1 from "../../assets/menupic1.jpg";
 import menuPic2 from "../../assets/menupic2.jpg";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Menu({ scrollTo, scrollRef }) {
   const [menuAnim, setMenuAnim] = useState();
+  const [menuMobiAnim, setMenuMobiAnim] = useState();
+  const menuMobiRef = useRef();
 
   useEffect(() => {
     if (!scrollRef?.current) return;
@@ -22,6 +24,21 @@ function Menu({ scrollTo, scrollRef }) {
     observer4.observe(scrollRef.current);
   }, []);
 
+  useEffect(() => {
+    if (!scrollRef?.current) return;
+    const observerMobi = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        setMenuMobiAnim(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          observerMobi.unobserve(scrollRef.current);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observerMobi.observe(scrollRef.current);
+  }, []);
+
   return (
     <>
       <div className="reservation-page__header">
@@ -36,9 +53,21 @@ function Menu({ scrollTo, scrollRef }) {
       </div>
       <div ref={scrollRef} className="menu">
         <div className="menu__cont">
-          <div className="menu__mobile-art">
-            <img className="menu__mobile-art-pic1" src={menuPic1} alt="" />
-            <img className="menu__mobile-art-pic2" src={menuPic2} alt="" />
+          <div
+            className={
+              menuMobiAnim ? "menu__mobile-art" : "menu__mobile-art--blurred"
+            }
+          >
+            <img
+              className="menu__mobile-art-pic1"
+              src={menuPic1}
+              alt="mobile art pic one"
+            />
+            <img
+              className="menu__mobile-art-pic2"
+              src={menuPic2}
+              alt="mobile art pic two"
+            />
           </div>
           <div className="menu__left">
             <div className="menu__item">
