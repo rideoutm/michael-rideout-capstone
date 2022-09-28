@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/michael-rideout-capstone/static/css/main.8dead8f1.css",
+    "main.css": "/michael-rideout-capstone/static/css/main.8e35d50c.css",
     "main.js": "/michael-rideout-capstone/static/js/main.4cea3b60.js",
     "static/media/pexels-daria-6536617.jpg": "/michael-rideout-capstone/static/media/pexels-daria-6536617.d8840dfb2ce0f14373db.jpg",
     "static/media/foodDisplay.jpg": "/michael-rideout-capstone/static/media/foodDisplay.dc14c2ff1a0f72e0b5bf.jpg",
@@ -27,11 +27,11 @@
     "static/media/quote-right-solid.svg": "/michael-rideout-capstone/static/media/quote-right-solid.fd6e2f1821c99fcad5d0004ad6553b40.svg",
     "static/media/square-facebook.svg": "/michael-rideout-capstone/static/media/square-facebook.34a92b1a24cafb2db79a21b61d75c85e.svg",
     "static/media/angle-down-solid.svg": "/michael-rideout-capstone/static/media/angle-down-solid.68e193f30f2b8a55254480db1f460271.svg",
-    "main.8dead8f1.css.map": "/michael-rideout-capstone/static/css/main.8dead8f1.css.map",
+    "main.8e35d50c.css.map": "/michael-rideout-capstone/static/css/main.8e35d50c.css.map",
     "main.4cea3b60.js.map": "/michael-rideout-capstone/static/js/main.4cea3b60.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dead8f1.css",
+    "static/css/main.8e35d50c.css",
     "static/js/main.4cea3b60.js"
   ]
 }
