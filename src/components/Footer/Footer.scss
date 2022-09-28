@@ -12,6 +12,17 @@
   color: #fff;
   margin-top: 1rem;
 
+  &__details {
+    font-size: 0.875rem;
+  }
+  &__socials {
+    padding-bottom: 0.25rem;
+  }
+
+  &__socials-link {
+    padding: 1rem;
+  }
+
   &__title {
     font-family: "herr von muellerhoff";
     font-size: 6rem;
