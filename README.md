@@ -22,7 +22,7 @@ Restaurant Annabelle is currently deployed and can be viewed at:
 
 ## Installation
 
-- Clone the Front-end repo from your terminal using `$ git clone https://github.com/rideoutm/michael-rideout-capstone
-- You will need to then run `npm i` to download all the node moduals
+- Clone the repo from your terminal using `$ git clone https://github.com/rideoutm/michael-rideout-capstone
+- You will need to then run `npm i` to download all the node modules.
 - To load the template on your local server, run `npm start` from your terminal
 - the template will be visible from `localhost:3000`.
