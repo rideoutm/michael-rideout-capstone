@@ -25,10 +25,10 @@ function Reservations({ resScrollRef, resScrollTo }) {
   return (
     <>
       <div className="reservation-page__header">
-        <h1 className="res-page-heading">RESERVATIONS</h1>
-        <div className="hero__scroll-to" onClick={resScrollTo}>
+        <h1 className="reservation-page__heading">RESERVATIONS</h1>
+        <div className="reservation-page__scroll-to" onClick={resScrollTo}>
           <img
-            className="hero__scroll-to-img"
+            className="reservation-page__scroll-to-img"
             src={downArrow}
             alt="scroll to"
           />
@@ -37,7 +37,7 @@ function Reservations({ resScrollRef, resScrollTo }) {
 
       <section
         ref={resScrollRef}
-        className={resAnim ? "reservationPage--animate" : "reservationPage"}
+        className={resAnim ? "res-page--animate" : "res-page"}
       >
         <div id="reservationTitle">
           <p>Reservations</p>
@@ -49,7 +49,7 @@ function Reservations({ resScrollRef, resScrollTo }) {
             </p>
           </div>
         </div>
-        <div id="reservationForm">
+        <div className="" id="reservationForm">
           <form action="">
             <div className="firstLastContainer">
               <div className="formInline first">

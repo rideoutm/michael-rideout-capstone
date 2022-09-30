@@ -6,13 +6,13 @@ function Modal(show, setShow) {
     <>
       {console.log("show:", show)}
       <div className={show.show ? "modal--visible" : "modal"}>
-        <Link to="/michael-rideout-capstone">
+        <Link onClick={() => setShow(false)} to="/">
           <div className="modal__link">WELCOME</div>
         </Link>
-        <Link to="/michael-rideout-capstone/menu">
+        <Link onClick={() => setShow(false)} to="/menu">
           <div className="modal__link">MENU</div>
         </Link>
-        <Link to="/michael-rideout-capstone/contact">
+        <Link onClick={() => setShow(false)} to="/contact">
           <div className="modal__link">CONTACT</div>
         </Link>
         <div className="modal__link"></div>

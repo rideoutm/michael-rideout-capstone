@@ -2,12 +2,11 @@ import "./Menu.scss";
 import downArrow from "../../assets/angle-down-solid.svg";
 import menuPic1 from "../../assets/menupic1.jpg";
 import menuPic2 from "../../assets/menupic2.jpg";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 function Menu({ scrollTo, scrollRef }) {
   const [menuAnim, setMenuAnim] = useState();
   const [menuMobiAnim, setMenuMobiAnim] = useState();
-  const menuMobiRef = useRef();
 
   useEffect(() => {
     if (!scrollRef?.current) return;
@@ -42,7 +41,7 @@ function Menu({ scrollTo, scrollRef }) {
   return (
     <>
       <div className="reservation-page__header">
-        <h1 className="res-page-heading">MENU</h1>
+        <h1 className="reservation-page__heading">MENU</h1>
         <div className="hero__scroll-to" onClick={scrollTo}>
           <img
             className="hero__scroll-to-img"

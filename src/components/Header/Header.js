@@ -44,10 +44,7 @@ function Header() {
       <Modal setShow={setShow} show={show} />
       <div className="navigation__list">
         <div className="navigation__list-item">
-          <Link
-            className="navigation__list-item-link"
-            to="/michael-rideout-capstone"
-          >
+          <Link className="navigation__list-item-link" to="/">
             WELCOME
           </Link>
         </div>
@@ -57,18 +54,12 @@ function Header() {
           </Link>
         </div> */}
         <div className="navigation__list-item">
-          <Link
-            className="navigation__list-item-link"
-            to="/michael-rideout-capstone/menu"
-          >
+          <Link className="navigation__list-item-link" to="/menu">
             MENU
           </Link>
         </div>
         <div className="navigation__list-item">
-          <Link
-            className="navigation__list-item-link"
-            to="/michael-rideout-capstone/contact"
-          >
+          <Link className="navigation__list-item-link" to="/contact">
             CONTACT
           </Link>
         </div>
@@ -108,19 +99,6 @@ function Header() {
           </a>
         </div>
       </div>
-      {/* <section class="hero">
-        <div
-          class="background-image"
-          style="background-image: url('assets/main.jpg')"
-        ></div>
-        <div class="hero-content-area">
-          <h1>Restaurant Annabelle</h1>
-          <h3></h3>
-        </div>
-        <a href="reservations.html" class="resBtn">
-          Book A Reservation
-        </a>
-      </section> */}
     </header>
   );
 }

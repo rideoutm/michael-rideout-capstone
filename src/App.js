@@ -29,16 +29,16 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/michael-rideout-capstone">
         <ScrollToTop>
           <Header />
           <Routes>
             <Route
-              path="/michael-rideout-capstone"
+              path="/"
               element={<Homepage scrollTo={scrollTo} scrollRef={scrollRef} />}
             ></Route>
             <Route
-              path="/michael-rideout-capstone/reservations"
+              path="/reservations"
               element={
                 <Reservations
                   resScrollRef={resScrollRef}
@@ -47,11 +47,11 @@ function App() {
               }
             />
             <Route
-              path="/michael-rideout-capstone/contact"
+              path="/contact"
               element={<ContactUs scrollTo={scrollTo} scrollRef={scrollRef} />}
             ></Route>
             <Route
-              path="/michael-rideout-capstone/menu"
+              path="/menu"
               element={<Menu scrollTo={scrollTo} scrollRef={scrollRef} />}
             />
           </Routes>
