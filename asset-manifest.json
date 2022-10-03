@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/michael-rideout-capstone/static/css/main.0cb6c27a.css",
-    "main.js": "/michael-rideout-capstone/static/js/main.dd450c22.js",
+    "main.js": "/michael-rideout-capstone/static/js/main.efa3fb49.js",
     "static/media/pexels-daria-6536617.jpg": "/michael-rideout-capstone/static/media/pexels-daria-6536617.d8840dfb2ce0f14373db.jpg",
     "static/media/foodDisplay.jpg": "/michael-rideout-capstone/static/media/foodDisplay.dc14c2ff1a0f72e0b5bf.jpg",
     "static/media/louis-hansel.jpg": "/michael-rideout-capstone/static/media/louis-hansel.5c6fce5f98fb12bed42f.jpg",
@@ -28,10 +28,10 @@
     "static/media/square-facebook.svg": "/michael-rideout-capstone/static/media/square-facebook.34a92b1a24cafb2db79a21b61d75c85e.svg",
     "static/media/angle-down-solid.svg": "/michael-rideout-capstone/static/media/angle-down-solid.68e193f30f2b8a55254480db1f460271.svg",
     "main.0cb6c27a.css.map": "/michael-rideout-capstone/static/css/main.0cb6c27a.css.map",
-    "main.dd450c22.js.map": "/michael-rideout-capstone/static/js/main.dd450c22.js.map"
+    "main.efa3fb49.js.map": "/michael-rideout-capstone/static/js/main.efa3fb49.js.map"
   },
   "entrypoints": [
     "static/css/main.0cb6c27a.css",
-    "static/js/main.dd450c22.js"
+    "static/js/main.efa3fb49.js"
   ]
 }
