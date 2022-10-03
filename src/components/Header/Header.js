@@ -33,7 +33,7 @@ function Header() {
   return (
     <header className={navBar ? "navigation--scrollActive" : "navigation"}>
       <div className="navigation__logo">
-        <Link to="/michael-rideout-capstone">Annabelle</Link>
+        <Link to="/">Annabelle</Link>
       </div>
 
       <div onClick={() => handleModal()} className="navigation__mob-menu">
